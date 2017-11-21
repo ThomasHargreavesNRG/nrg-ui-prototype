@@ -1,3 +1,50 @@
-<mat-toolbar color="primary">
-  <span>SMART</span>
-</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="example-sidenav">
+      <mat-nav-list>
+          <mat-list-item>
+             <a matLine href="...">Account</a>
+             <button mat-icon-button (click)="showInfo(link)">
+                <mat-icon>account_circle</mat-icon>
+             </button>
+          </mat-list-item>
+          <mat-list-item>
+             <a matLine href="...">Home</a>
+             <button mat-icon-button (click)="showInfo(link)">
+                <mat-icon>home</mat-icon>
+             </button>
+          </mat-list-item>
+          <mat-list-item>
+             <a matLine href="...">Jobs</a>
+             <button mat-icon-button (click)="showInfo(link)">
+                <mat-icon>assignment</mat-icon>
+             </button>
+          </mat-list-item>
+          <mat-list-item>
+             <a matLine href="...">Contact Us</a>
+             <button mat-icon-button (click)="showInfo(link)">
+                <mat-icon>phone</mat-icon>
+             </button>
+          </mat-list-item>
+         </mat-nav-list>
+  </mat-sidenav>
+ 
+  <div class="page-content">
+    <header>  
+      <mat-toolbar color="primary">
+        <mat-icon (click)="sidenav.open()" class="example-icon">menu</mat-icon>            
+        <span>SMART</span>
+      </mat-toolbar>
+    </header>
+    <main>
+      <mat-tab-group>
+        <mat-tab label="Workshop Jobs">
+          Content 1
+        </mat-tab>
+        <mat-tab label="Accounts">
+          Content 2
+        </mat-tab>
+      </mat-tab-group>
+    </main>
+  </div>
+ 
+ </mat-sidenav-container>
